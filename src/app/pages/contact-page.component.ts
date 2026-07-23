@@ -13,13 +13,21 @@ import { SITE_CONTENT } from '../site-content';
     </section>
 
     <section class="page-block links">
-      <a href="http://www.achiavari.it/" target="_blank" rel="noreferrer">{{ content().contact.websiteLabel }}</a>
-      <a href="https://www.booking.com/hotel/it/appartamento-a-chiavari.it.html" target="_blank" rel="noreferrer">{{ content().contact.bookingLabel }}</a>
+      <a href="https://wa.me/393294375498" target="_blank" rel="noreferrer">{{ content().contact.whatsappLabel }}</a>
+      <a href="mailto:info@achiavari.it" target="_blank" rel="noreferrer">{{ content().contact.emailLabel }}</a>
+      <a href="https://maps.app.goo.gl/PgRKdgQr2TTqBhaJA" target="_blank" rel="noreferrer">{{ content().contact.mapsLabel }}</a>
+    </section>
+
+    <section class="page-block">
+      <h2>{{ content().contact.quickTitle }}</h2>
+      <p>{{ content().contact.quickText }}</p>
     </section>
 
     <section class="page-block split">
       <article>
-        <h2>{{ content().contact.locationLabel }}</h2>
+        <h2>{{ content().contact.addressLabel }}</h2>
+        <p>{{ content().contact.addressText }}</p>
+        <h3>{{ content().contact.locationLabel }}</h3>
         <p>{{ content().contact.locationText }}</p>
       </article>
       <article>

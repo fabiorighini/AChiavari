@@ -48,8 +48,15 @@ export interface SiteContent {
   contact: {
     title: string;
     intro: string;
-    bookingLabel: string;
+    quickTitle: string;
+    quickText: string;
+    whatsappLabel: string;
+    emailLabel: string;
+    mapsLabel: string;
     websiteLabel: string;
+    bookingLabel: string;
+    addressLabel: string;
+    addressText: string;
     locationLabel: string;
     locationText: string;
     transportTitle: string;
@@ -187,18 +194,26 @@ export const SITE_CONTENT: Record<Lang, SiteContent> = {
       ctaContact: 'Contatta il B&B'
     },
     contact: {
-      title: 'Organizza il tuo soggiorno',
+      title: 'Contattaci direttamente',
       intro:
-        'Scrivici per disponibilita, periodi e suggerimenti su esperienze in Riviera.',
-      bookingLabel: 'Annuncio Booking appartamento',
+        'Tutto quello che serve per organizzare il tuo arrivo a Chiavari, con contatti rapidi e indicazioni pratiche.',
+      quickTitle: 'Hai bisogno di una risposta veloce?',
+      quickText:
+        'Per disponibilita immediate o per coordinare orario di arrivo e check-in, WhatsApp e il canale piu diretto.',
+      whatsappLabel: 'Scrivici su WhatsApp',
+      emailLabel: 'Email',
+      mapsLabel: 'Google Maps',
       websiteLabel: 'Sito ufficiale appartamento',
-      locationLabel: 'Posizione',
-      locationText: 'Centro storico di Chiavari, vicino a Piazza Mazzini',
-      transportTitle: 'Escursioni consigliate',
+      bookingLabel: 'Annuncio Booking appartamento',
+      addressLabel: 'Indirizzo',
+      addressText: 'Centro storico di Chiavari (GE)',
+      locationLabel: 'Posizione comoda',
+      locationText: 'A pochi minuti a piedi da stazione, centro storico e mare.',
+      transportTitle: 'Informazioni utili per l\'arrivo',
       transport: [
-        'Cinque Terre in treno',
-        'Portofino e Santa Margherita in battello o auto',
-        'Genova, Rapallo, Camogli e Sestri Levante in giornata'
+        'Rispondiamo in italiano e inglese',
+        'La stazione e raggiungibile in pochi minuti a piedi',
+        'Ti supportiamo con indicazioni pratiche prima del check-in'
       ]
     },
     footer: {
@@ -280,18 +295,26 @@ export const SITE_CONTENT: Record<Lang, SiteContent> = {
       ctaContact: 'Contact the B&B'
     },
     contact: {
-      title: 'Plan your stay',
+      title: 'Contact us directly',
       intro:
-        'Contact us for availability, travel periods, and local experience tips across the Riviera.',
-      bookingLabel: 'Apartment Booking listing',
+        'Everything you need to plan your arrival in Chiavari, with quick contact options and practical guidance.',
+      quickTitle: 'Need a quick response?',
+      quickText:
+        'For immediate availability or to coordinate your arrival and check-in time, WhatsApp is the fastest channel.',
+      whatsappLabel: 'Message us on WhatsApp',
+      emailLabel: 'Email',
+      mapsLabel: 'Google Maps',
       websiteLabel: 'Official apartment website',
-      locationLabel: 'Location',
-      locationText: 'Chiavari historic center, near Piazza Mazzini',
-      transportTitle: 'Recommended trips',
+      bookingLabel: 'Apartment Booking listing',
+      addressLabel: 'Address',
+      addressText: 'Historic center of Chiavari (GE)',
+      locationLabel: 'Convenient location',
+      locationText: 'Only a short walk from the train station, old town, and seafront.',
+      transportTitle: 'Useful arrival information',
       transport: [
-        'Cinque Terre by train',
-        'Portofino and Santa Margherita by boat or car',
-        'Genoa, Rapallo, Camogli, and Sestri Levante as day trips'
+        'We reply in Italian and English',
+        'The train station is reachable within a few minutes on foot',
+        'We provide practical guidance before check-in'
       ]
     },
     footer: {

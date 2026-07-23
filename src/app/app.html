@@ -1,13 +1,24 @@
 <header class="hero-shell">
   <div class="hero-overlay">
     <nav class="top-nav">
-      <a class="brand" routerLink="/">A Chiavari</a>
-      <div class="menu-links">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ content().nav.home }}</a>
-        <a routerLink="/appartamento" routerLinkActive="active">{{ content().nav.apartment }}</a>
-        <a routerLink="/gallery" routerLinkActive="active">{{ content().nav.gallery }}</a>
-        <a routerLink="/alloggio-alternativo" routerLinkActive="active">{{ content().nav.alternative }}</a>
-        <a routerLink="/contatti" routerLinkActive="active">{{ content().nav.contact }}</a>
+      <a class="brand" routerLink="/">Appartamento "A" Chiavari</a>
+      <button
+        class="hamburger"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen()"
+        aria-label="Apri o chiudi il menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="menu-links" [class.menu-open]="isMenuOpen()">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">{{ content().nav.home }}</a>
+        <a routerLink="/appartamento" routerLinkActive="active" (click)="closeMenu()">{{ content().nav.apartment }}</a>
+        <a routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">{{ content().nav.gallery }}</a>
+        <a routerLink="/alloggio-alternativo" routerLinkActive="active" (click)="closeMenu()">{{ content().nav.alternative }}</a>
+        <a routerLink="/contatti" routerLinkActive="active" (click)="closeMenu()">{{ content().nav.contact }}</a>
       </div>
       <div class="lang-switch" aria-label="language switcher">
         <button type="button" [class.selected]="lang() === 'it'" (click)="setLanguage('it')">IT</button>
@@ -16,7 +27,6 @@
     </nav>
 
     <section class="hero-copy">
-      <p class="eyebrow">{{ content().hero.eyebrow }}</p>
       <h1>{{ content().hero.title }}</h1>
       <p>{{ content().hero.subtitle }}</p>
       <div class="hero-actions">
