@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --display-font: 'Cormorant Garamond', serif;
+  --body-font: 'Manrope', 'Segoe UI', sans-serif;
+
+  --paper-100: #f6efe2;
+  --paper-200: #efe4d3;
+  --accent-300: #d4b790;
+  --sea-500: #3c7088;
+  --sea-600: #28596f;
+  --ink-900: #1d3946;
+  --ink-700: #446272;
+
+  --surface: #f6f1e8;
+  --surface-raised: #fffaf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--ink-900);
+  background:
+    radial-gradient(circle at 0% 8%, rgb(255 242 217 / 0.9), transparent 40%),
+    radial-gradient(circle at 95% 0%, rgb(131 178 199 / 0.24), transparent 44%),
+    var(--surface);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display-font);
+  margin: 0;
+  color: var(--ink-900);
+}
+
+p {
+  line-height: 1.62;
+}
+
+.page-block {
+  background: var(--surface-raised);
+  border: 1px solid rgb(77 109 120 / 14%);
+  border-radius: 0.95rem;
+  padding: clamp(1rem, 2.1vw, 1.55rem);
+  box-shadow: 0 14px 28px rgb(20 45 57 / 8%);
+  margin-bottom: 1.05rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.85rem;
+}
+
+.info-card {
+  background: linear-gradient(165deg, #fff8eb, #f2e9db);
+  border: 1px solid rgb(104 124 132 / 18%);
+  border-radius: 0.85rem;
+  padding: 1.05rem;
+  min-height: 7.6rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.gallery-item {
+  margin: 0;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgb(24 50 62 / 16%);
+  transform: translateY(0);
+  transition: transform 220ms ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-item:focus-visible {
+  outline: 3px solid var(--accent-300);
+  outline-offset: 2px;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgb(7 22 29 / 82%);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.lightbox-panel {
+  position: relative;
+  width: min(100%, 68rem);
+}
+
+.lightbox-image {
+  width: 100%;
+  max-height: 86dvh;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  box-shadow: 0 20px 44px rgb(0 0 0 / 35%);
+  background: #0f2630;
+}
+
+.lightbox-btn {
+  position: absolute;
+  border: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.45rem;
+  background: rgb(255 248 233 / 90%);
+  color: var(--ink-900);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-btn:hover {
+  background: #fff;
+}
+
+.lightbox-close {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev {
+  left: 0.5rem;
+}
+
+.lightbox-next {
+  right: 0.5rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.links a,
+.button {
+  display: inline-block;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  padding: 0.62rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  border: 1px solid transparent;
+}
+
+.button,
+.links a:first-child {
+  background: var(--ink-900);
+  color: var(--paper-100);
+}
+
+.button-secondary,
+.links a:last-child {
+  background: var(--paper-100);
+  color: var(--ink-900);
+  border-color: rgb(64 99 112 / 28%);
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .page-block {
+    border-radius: 0.8rem;
+  }
+}

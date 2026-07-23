@@ -1,0 +1,36 @@
+<header class="hero-shell">
+  <div class="hero-overlay">
+    <nav class="top-nav">
+      <a class="brand" routerLink="/">A Chiavari</a>
+      <div class="menu-links">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ content().nav.home }}</a>
+        <a routerLink="/appartamento" routerLinkActive="active">{{ content().nav.apartment }}</a>
+        <a routerLink="/gallery" routerLinkActive="active">{{ content().nav.gallery }}</a>
+        <a routerLink="/alloggio-alternativo" routerLinkActive="active">{{ content().nav.alternative }}</a>
+        <a routerLink="/contatti" routerLinkActive="active">{{ content().nav.contact }}</a>
+      </div>
+      <div class="lang-switch" aria-label="language switcher">
+        <button type="button" [class.selected]="lang() === 'it'" (click)="setLanguage('it')">IT</button>
+        <button type="button" [class.selected]="lang() === 'en'" (click)="setLanguage('en')">EN</button>
+      </div>
+    </nav>
+
+    <section class="hero-copy">
+      <p class="eyebrow">{{ content().hero.eyebrow }}</p>
+      <h1>{{ content().hero.title }}</h1>
+      <p>{{ content().hero.subtitle }}</p>
+      <div class="hero-actions">
+        <a class="button" routerLink="/appartamento">{{ content().hero.ctaPrimary }}</a>
+        <a class="button button-secondary" routerLink="/gallery">{{ content().hero.ctaSecondary }}</a>
+      </div>
+    </section>
+  </div>
+</header>
+
+<main class="page-shell">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <p>{{ content().footer.text }}</p>
+</footer>

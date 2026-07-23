@@ -198,6 +198,32 @@ AutoTest.Net/
 
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/
+
+# Angular and Node.js
+dist/
+tmp/
+out-tsc/
+bazel-out/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# VS Code workspace files for Angular project
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Angular CLI cache and misc
+.angular/cache/
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+__screenshots__/
 DocProject/Help/*.HxT
 DocProject/Help/*.HxC
 DocProject/Help/*.hhc
